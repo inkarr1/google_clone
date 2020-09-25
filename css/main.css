@@ -53,6 +53,24 @@ main .main-logo{
   margin-bottom: 3.5rem;
 }
 main .main-logo img{
-  width: 27.2rem;
-  height: 9.2rem;
+  width: 30rem;
+}
+main .main-input{
+  width: 53rem;
+  margin: 0 auto;
+  margin-bottom: 3.5rem;
+}
+main .main-input-container{
+  width: 52.5rem;
+  border-radius: 10rem;
+  border: 0.1rem solid #dfe1e5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .main-input input{
+  width: 45rem;
+  height: 4rem;
+  border: none;
+  outline: none;
 }
