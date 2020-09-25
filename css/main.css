@@ -74,3 +74,24 @@ main .main-input input{
   border: none;
   outline: none;
 }
+main .main-input-container:hover{
+  box-shadow: 0 0.1rem 0.6rem 0 #20212447;
+  border-color: #dfe1e500;
+}
+main .main-input .search-icon{
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Vector_search_icon.svg/945px-Vector_search_icon.svg.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  width: 1.8rem;
+  height: 1.8rem;
+}
+main .main-input .micro-icon{
+  background-image: url('https://www.gstatic.com/images/branding/googlemic/2x/googlemic_color_24dp.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  width: 1.8rem;
+  height: 1.8rem;
+  cursor: pointer;
+}
