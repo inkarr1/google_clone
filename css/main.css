@@ -31,3 +31,15 @@ nav .nav-right-section a{
   margin-right: 1rem;
   color: black;
 }
+nav .nav-right-section .menu-icon{
+  background-image: url('https://static.thenounproject.com/png/756729-200.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  width: 2.5rem;
+  height: 2.5rem;
+}
+nav .nav-right-section img{
+  border-radius: 50%;
+  margin-left: 1rem;
+}
