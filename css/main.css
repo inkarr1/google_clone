@@ -1,37 +1,49 @@
-html{
+html {
   font-size: 62.5%;
 }
-body{
+
+body {
   margin: 0;
   padding: 0;
   font-size: 1.3rem;
   font-family: Arial, Helvetica, sans-serif;
 }
-a{
+
+a {
   text-decoration: none;
   cursor: pointer;
+  color: black;
 }
-header{
-  width: 100%;
-  height: 6rem;
+
+ul {
+  margin: 0;
+  padding: 0;
 }
-header nav{
+
+.header {
   display: flex;
-  justify-content: flex-end;
+  height: 6rem;
+  margin-bottom: 15rem;
 }
-header nav .nav-right-section{
-  width: 25rem;
-  height: auto;
+
+.header .navigator-container {
+  display: flex;
+  margin-left: auto;
+}
+
+.navigator-container .navigator-section {
   display: flex;
   list-style: none;
   justify-content: center;
   align-items: center;
+  margin-right: 2.4rem;
 }
-nav .nav-right-section a{
+
+.navigator-section li {
   margin-right: 1rem;
-  color: black;
 }
-nav .nav-right-section .menu-icon{
+
+.navigator-section .menu-icon {
   background-image: url('https://static.thenounproject.com/png/756729-200.png');
   background-repeat: no-repeat;
   background-position: center;
@@ -39,28 +51,33 @@ nav .nav-right-section .menu-icon{
   width: 2.5rem;
   height: 2.5rem;
 }
-nav .nav-right-section img{
+
+.navigator-section img {
   border-radius: 50%;
-  margin-left: 1rem;
 }
-main{
-  margin-top: 15rem;
-  text-align: center;
+
+.main {
+  display: flex;
+  flex-direction: column;
 }
-main .main-logo{
-  width: 53rem;
-  margin: 0 auto;
+
+.main .main-logo {
+  display: flex;
+  justify-content: center;
   margin-bottom: 3.5rem;
 }
-main .main-logo img{
+
+.main-logo img {
   width: 30rem;
 }
-main .main-input{
-  width: 53rem;
-  margin: 0 auto;
+
+.main .main-input {
+  display: flex;
+  justify-content: center;
   margin-bottom: 3.5rem;
 }
-main .main-input-container{
+
+.main .main-input-container {
   width: 52.5rem;
   border-radius: 10rem;
   border: 0.1rem solid #dfe1e5;
@@ -68,17 +85,20 @@ main .main-input-container{
   justify-content: center;
   align-items: center;
 }
-main .main-input input{
+
+.main .main-input input {
   width: 45rem;
   height: 4rem;
   border: none;
   outline: none;
 }
-main .main-input-container:hover{
+
+.main .main-input-container:hover {
   box-shadow: 0 0.1rem 0.6rem 0 #20212447;
   border-color: #dfe1e500;
 }
-main .main-input .search-icon{
+
+.main .main-input .search-icon {
   background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Vector_search_icon.svg/945px-Vector_search_icon.svg.png');
   background-repeat: no-repeat;
   background-position: center;
@@ -86,7 +106,8 @@ main .main-input .search-icon{
   width: 1.8rem;
   height: 1.8rem;
 }
-main .main-input .micro-icon{
+
+.main .main-input .micro-icon {
   background-image: url('https://www.gstatic.com/images/branding/googlemic/2x/googlemic_color_24dp.png');
   background-repeat: no-repeat;
   background-position: center;
@@ -95,16 +116,25 @@ main .main-input .micro-icon{
   height: 1.8rem;
   cursor: pointer;
 }
-main .main-buttons{
-  width: 53rem;
-  margin: 0 auto;
+
+.main .main-buttons {
+  display: grid;
+  grid-template-columns: 20rem 20rem;
+  justify-content: center;
 }
-main .main-buttons div{
+
+/* .main .main-buttons {
+  display: flex;
+  justify-content: center;
+} */
+
+/* .main .main-buttons div {
   display: inline-block;
-}
-main .main-buttons button{
+} */
+
+.main .main-buttons button {
   height: 3.6rem;
-  background-color: #f2f2f2;
+  background-color: #F8F9FA;
   border: 0;
   font-size: 1.4rem;
   color: #5f6368;
@@ -112,12 +142,14 @@ main .main-buttons button{
   padding: 0 1.5rem;
   margin-right: 1.5rem;
 }
-main .main-buttons button:hover{
+
+.main .main-buttons button:hover {
   border: 0.1rem solid #c6c6c6;
   box-shadow: #000001;
   color: #222;
 }
-footer{
+
+.footer {
   width: 100%;
   height: 5rem;
   position: absolute;
@@ -129,19 +161,84 @@ footer{
   background-color: #f2f2f2;
   border-top: 0.1rem solid #e4e4e4;
 }
-footer ul{
-  margin: 1rem;
+
+.footer ul {
   list-style: none;
   display: flex;
-  padding-left: 0;
 }
-footer .footer-left{
+
+.footer .footer-left {
   justify-self: left;
 }
-footer .footer-right{
+
+.footer .footer-right {
   justify-self: right;
 }
-footer ul li a{
-  margin: 1rem;
+
+.footer-left li{
+  margin-left: 2rem;
+}
+
+.footer-right li{
+  margin-right: 2rem;
+}
+
+.footer-text {
   color: #5f6368;
+  font-size: 1.2rem;
+}
+.footer-text:hover {
+  text-decoration: underline;
+}
+
+@media screen and (max-width:768px){
+  .footer {
+    grid-template-columns: 1fr;
+    height: 8rem;
+  }
+  .footer .footer-left{
+    justify-self:center;
+  }
+  .footer .footer-right{
+    justify-self: center;
+  }
+}
+
+@media screen and (max-width:570px){
+  .main-logo img {
+    width: 25rem;
+  }
+  .main .main-input-container {
+    width: 37.5rem;
+  }
+  .main .main-input input {
+    width: 30rem;
+  }
+}
+
+@media screen and (max-width:480px){
+  .main-logo img {
+    width: 20rem;
+  }
+  .main .main-input-container {
+    width: 32.5rem;
+  }
+  .main .main-input input {
+    width: 25rem;
+  }
+  .main .main-buttons {
+    visibility: hidden;
+  }
+}
+
+@media screen and (max-width:320px){
+  .main-logo img {
+    width: 18rem;
+  }
+  .main .main-input-container {
+    width: 27rem;
+  }
+  .main .main-input input {
+    width: 20rem;
+  }
 }
